@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventora | Discover Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">Event<span>ora.</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeToggle" class="theme-btn">☀</button>
+            <a href="#events" class="nav-btn">Explore Events</a>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">YOUR NEXT EXPERIENCE STARTS HERE</span>
+        <h1>Discover Events.<br><span>Create Memories.</span></h1>
+        <p>Find exciting events, connect with amazing people and experience something unforgettable.</p>
+        <a href="#events" class="primary-btn">Explore Events →</a>
+    </div>
+</section>
+
+<section class="events-section" id="events">
+    <div class="section-heading">
+        <div>
+            <span class="tag">WHAT'S HAPPENING</span>
+            <h2>Upcoming Events</h2>
+            <p>Find your next favourite experience.</p>
+        </div>
+    </div>
+
+    <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search events...">
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="Technology">Technology</option>
+            <option value="Music">Music</option>
+            <option value="Sports">Sports</option>
+            <option value="Business">Business</option>
+            <option value="Workshop">Workshop</option>
+        </select>
+    </div>
+
+    <div class="event-grid" id="eventGrid"></div>
+</section>
+
+<section class="about-section" id="about">
+    <span class="tag">ABOUT EVENTORA</span>
+    <h2>Making Every Event Special</h2>
+    <p>Eventora is your destination for discovering exciting experiences. From technology conferences to music festivals, find events that inspire you.</p>
+</section>
+
+<section class="newsletter" id="contact">
+    <h2>Ready for your next experience?</h2>
+    <p>Discover exciting events and make unforgettable memories.</p>
+    <a href="#events" class="primary-btn">Find Events →</a>
+</section>
+
+<footer>
+    <h2>Eventora.</h2>
+    <p>Discover. Connect. Experience.</p>
+    <p>© 2026 Eventora. All rights reserved.</p>
+</footer>
+
+<!-- Event Details Modal -->
+<div class="modal" id="eventModal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <img id="modalImage" src="" alt="Event">
+        <span class="tag" id="modalCategory"></span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <p id="modalDate"></p>
+        <p id="modalVenue"></p>
+        <p id="modalPrice"></p>
+        <button class="primary-btn" id="registerBtn">Register Now</button>
+    </div>
+</div>
+
+<!-- Registration Modal -->
+<div class="modal" id="registrationModal">
+    <div class="modal-content registration-content">
+        <button class="close-btn" id="closeRegistration">&times;</button>
+        <h2>Event Registration</h2>
+        <p>Fill in your details to reserve your spot.</p>
+
+        <form id="registrationForm">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="10-digit phone number" required>
+
+            <label>Selected Event</label>
+            <input type="text" id="selectedEvent" readonly>
+
+            <button type="submit" class="primary-btn">Confirm Registration</button>
+        </form>
+
+        <div id="successMessage"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
